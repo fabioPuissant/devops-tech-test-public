@@ -31,3 +31,5 @@ jobs:
       - name: Build with Gradle Wrapper
         run: ./gradlew build
 
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag spring-petclinic:$(date +%s)
